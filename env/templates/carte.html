@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Modeste Tours</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename= 'css/carte.css') }}">
+    </head>
+<body>
+    <quote>{{pseudo}}</quote>
+    <hr>
+
+<div class="bg-white">
+    <svg class="border-dark my-2 mx-1" version="1.1" viewBox="0 0 800 400">
+
+
+        
+        <!-- limites du lycée -->
+       
+            <path id="limite" d="M4 104 L 120,90 L 150,108 L 170,106 V 84 H 240 L 242,32 H 266 L 270,84 H 540 L 680,48 L 758,116 L 800,190 V 274
+            Q 650,340 480,338 Q 300,340 200,320 Q 80,300 50,270 Q 20,240 16,220 Z" fill="var(--espace-vert)" stroke="black" opacity="1"></path>
+        
+
+        <!-- routes dans le lycée-->
+
+        <!-- sortie rue Hardencourt -->
+        
+            <path id="sortie_Hardencourt" d="M255 33 V 60 Q 255,75 246,110 Q 240,181 270,206 Q 280,215 310,214 H 476 Q 582,142 646,162 Q 685,173 762,288" fill="none" stroke="var(--couleur-route)" stroke-width="8" opacity="1"></path>
+        
+
+        <!-- derrière bat 5,6,7 et 8 -->
+       
+            <path id="derriere_5,6,7,8" d="M730 242 L 758,134 Q 760,126 750,116 L 715,90 Q 708,84 688,76 Q 676,70 670,70
+            L 644,70 Q 640,70 618,77 L 580,90 Q 572,92 566,90 Q 549,85 542,98 Q 538,107 539,115 Q 541,120 538,126 L 524,152
+            Q 522,156 524,162 L 528,181" fill="none" stroke="var(--couleur-route)" stroke-width="7" opacity="1"></path>
+        
+
+       
+            <path id="cote_bat7" d="M687 75 L 645,162" fill="none" stroke="var(--couleur-route)" stroke-width="7" opacity="1"></path>
+        
+
+        
+            <path id="cote_bat6" d="M622 76 L 594,136 Q 592,140 594,148 L 596,157" fill="none" stroke="var(--couleur-route)" stroke-width="7" opacity="1"></path>
+        
+        
+       
+            <path id="cote1_bat4" d="M42 240 Q 65,277 100,280 H 130 Q 140,280 156,288 Q 168,293 180,293 H 246 Q 254,293 258,295 Q 264,297 270,297 H 476
+            Q 530,297 560,293 L 660,280 Q 696,276 730,240" fill="none" stroke="var(--couleur-route)" stroke-width="7" opacity="1"></path>
+        
+
+        
+            <path id="cote2_bat4" d="M64 216 Q 68,252 108,280" fill="none" stroke="var(--couleur-route)" stroke-width="7" opacity="1"></path>
+        
+
+       
+            <path id="cote_gymnase" d="M250 90 H 200 Q 185,90 176,108 Q 167,126 167,140 V 290" fill="none" stroke="var(--couleur-route)" stroke-width="7" opacity="1"></path>
+        
+
+       
+            <path id="cote_bat3" d="M172 118 H 100" fill="none" stroke="var(--couleur-route)" stroke-width="7" opacity="1"></path>
+       
+
+        
+            <path id="acces" d="M477 297 V 338" fill="none" stroke="var(--couleur-route)" stroke-width="7" opacity="1"></path>
+       
+
+        <!-- rue Brossolette -->
+          
+            <path id="Brossolette" d="M811 282 Q 650,354 480,350 Q 300,352 200,332 Q 76,312 -10,280" fill="none" stroke="gray" stroke-width="20" opacity="1"></path>
+        
+
+       
+            <path d="M477 346 L 477,400" fill="none" stroke="gray" stroke-width="20" opacity="1"></path>
+        
+
+       
+            <path d="M384 350 L 383,373" fill="none" stroke="gray" stroke-width="16" opacity="1"></path>
+       
+
+       
+            <path d="M332 346 L 330,368" fill="none" stroke="gray" stroke-width="16" opacity="1"></path>
+       
+
+       
+            <path d="M264 340 L 261,362" fill="none" stroke="gray" stroke-width="16" opacity="1"></path>
+        
+
+       
+            <path d="M104 316 L 101,335" fill="none" stroke="gray" stroke-width="14" opacity="1"></path>
+       
+
+
+
+        <!-- rue Du Guesclin -->
+       
+            <path id="Guesclin" d="M-17 30 L 11,295 Q 20,360 30,410 " fill="none" stroke="gray" stroke-width="20" opacity="1"></path>
+        
+
+        <!-- rue Hardencourt -->
+       
+            <path id="Hardencourt" d="M-10 67 Q 100,22 140,22 L 480,20 Q 540,20 600,-8" fill="none" stroke="gray" stroke-width="17" opacity="1"></path>
+      
+
+        
+            <path d="M130 22 L 160,-20" fill="none" stroke="gray" stroke-width="17" opacity="1"></path>
+       
+
+        
+            <path d="M280 22 L 300,-18" fill="none" stroke="gray" stroke-width="15" opacity="1"></path>
+        
+
+        
+            <path d="M490 20 L 520,-20" fill="none" stroke="gray" stroke-width="15" opacity="1"></path>
+        
+
+       
+        <!-- batiment 4 -->
+
+        <a class="bat" href="/bat4" >
+        <linearGradient id="gradient4">
+            <stop class="begin" offset="{{bat4}}%"/>
+            <stop class="end" offset="0%"/>
+        </linearGradient>
+            <polygon id="bat4" points="14,112 90,112 90,168 64,168 64,196 54,196 54,232 36,232 36,234
+            30,234 30,232 24,232 24,176 32,176 32,168 14,168" 
+            fill="url(#gradient4)" stroke="black" opacity="0.9"/>
+        </a>
+   
+        <!-- appartement batiment 4 -->
+
+        <polygon id="appt_bat4" points="10,170 22,170 22,178 10,178" fill="gray" stroke="black" opacity="0.9"></polygon>
+
+        <!-- allée couverte 3 à 4" --> 
+
+        <a href="./03_passage_3_4/index_passage_3_4.html">
+            <polygon id="bat3-bat4" points="64,182 100,182 100,189 64,189" 
+            fill="gray" stroke="black" opacity="0.9"/>
+        </a>
+       
+
+        <!-- batiment 3 -->
+
+        <a class="bat" href="/bat3" >
+            <linearGradient id="gradient3">
+                <stop class="begin" offset="{{bat3}}%"/>
+                <stop class="end" offset="0%"/>
+              </linearGradient>
+            <polygon id="bat3" points="100,128 154,128 154,258 100,258" 
+            fill="url(#gradient3)" stroke="black" opacity="0.9"/>
+        </a>
+        
+        <!-- gymnase -->
+
+        
+        <a href="./02_bat_3/index_bat_3.html" class="bat">
+            <polygon id="gymnase" points="198,96 238,96 238,100 242,100 234,138 230,138 230,172 180,172
+            180,150 196,150 196,110 198,110" fill="gray" stroke="black" opacity="0.9"><title>Gymnase</title></polygon>
+        </a>
+
+        <!-- batiment 2 -->
+
+        
+        <a class="bat" href="/bat2" >
+            <linearGradient id="gradient2">
+                <stop class="begin" offset="{{bat2}}%"/>
+                <stop class="end" offset="0%"/>
+              </linearGradient>
+            <polygon id="bat2" points="180,172 236,172 236,254 256,254 256,262 264,262 264,286 252,286
+            252,284 186,284 186,272 180,272" fill="url(#gradient2)" stroke="black" stroke-width="1"><title>Batiment 2</title></polygon>
+        </a>
+
+        <!-- batiment 1-->
+        
+        <a class="bat" href="/bat1" >
+            <linearGradient id="gradient1">
+                <stop class="begin" offset="{{bat1}}%"/>
+                <stop class="end" offset="0%"/>
+              </linearGradient>
+            <path id="bat1" d="M264 262 H 315 V 252 H 329 V 262 H 378 V 252 H 392 V 262 H 442 V 256 
+            H 456 V 284 H 442 V 278 H 392 V 284 H 378 V 289 H 329 V 284 H 315 V 278 H 264 Z" fill="url(#gradient1)" stroke="black" stroke-width="1"><title>Batiment 1</title></path>
+           
+        </a> 
+        
+
+        <!-- Hall -->
+
+        <a class="bat" href="/hall" >
+            <linearGradient id="gradientH">
+                <stop class="begin" offset="{{hall}}%"/>
+                <stop class="end" offset="0%"/>
+              </linearGradient>
+            <path id="Hall" d="M456 268 H 459 V 262 H 474 V 266 H 480 V 262 H 489 V 268 H 492 V 280 H 468 V 282 H 459 V 280 H 456 Z" fill="url(#gradientH)" stroke="black" stroke-width="1"><title>Hall</title></path>
+        </a>
+
+        <!-- administration -->
+
+        <a href="./06_bat_1/index_bat_1.html" class="bat">
+            <path id="administration" d="M492 238 H 504 V 256 H 510 V 270 H 512 V 278 H 504 V 285 H 492 Z" fill="gray" stroke="black" stroke-width="1"></path>
+        </a>
+
+        <!-- "batiment cantine" -->
+
+        <a href="./06_bat_1/index_bat_1.html" class="bat">
+            <path id="europe" d="M510 256 H 520 V 235 H 538 V 235 H 538 V 256 H 552 V 262 H510 Z" fill="gray" stroke="black" stroke-width="1"></path>
+        </a>
+
+        <a class="bat">
+            <path id="cantine" d="M552 235 H 570 V 239 H 586 V 235 H 604 V 262 H 596 V 282 H 560 V 262 H 552 Z" fill="gray" stroke="black" stroke-width="1"></path>
+        </a>
+
+        <a class="bat">
+            <path id="foyer" d="M604 256 H 618 V 235 H 642 V 262 H 618 V 266 H 611 V 262 H 604 Z" fill="gray" stroke="black" stroke-width="1"></path>
+        </a>
+
+        <a href="./02 essai.html">
+            <path id="allee_couverte" d="M498 231 H 642 V 235 H 504 V 238 H 498 Z" fill="gray" stroke="black" stroke-width="1"></path>
+        </a>
+
+        <!-- batiment 5 -->
+
+        <a href="./06_bat_1/index_bat_1.html" class="bat">
+            <polygon id="bat5" points="562,98 573,103 545,159 548,160 546,164 528,155 535,142 538,143" fill="gray" stroke="black" opacity="0.9"></polygon>
+        </a>
+
+        <!-- batiment 6 -->
+
+        <a href="./06_bat_1/index_bat_1.html" class="bat">
+            <polygon id="bat6" points="632,78 643,83 618,136 620,137 617,144 614,143 612,146 602,141
+            603,138 600,136 606,124 610,125" fill="gray" stroke="black" opacity="0.9"></polygon>
+        </a>
+
+
+         <!-- garage batiment 6 -->
+        
+            <polygon id="garage-bat6" points="651,57 679,50 683,63 673,65 672,61 653,65" fill="gray" stroke="black" opacity="0.9"></polygon>
+        
+
+        <!-- batiment 7 -->
+
+            <polygon id="bat7" points="692,84 703,90 676,144 680,146 677,152 673,150 671,155 660,149 
+             661,146 659,144 665,132 668,132" fill="gray" stroke="black" opacity="0.9"></polygon>
+
+        <!-- batiment 8 -->
+        
+            <polygon id="bat8" points="740,120 751,126 725,180 726,181 724,186 708,178 714,166 718,167" fill="gray" stroke="black" opacity="0.9"></polygon>
+
+        <!-- batiment Muriel-->
+       
+            <polygon id="bat_Muriel" points="754,188 782,200 777,213 749,201" fill="gray" stroke="black" opacity="0.9"></polygon>
+
+        <!-- maison proviseur-->
+       
+            <polygon id="maison_pro" points="760,240 772,238 776,256 764,258" fill="gray" stroke="black" opacity="0.9"></polygon>
+
+        <!-- stade extérieur-->
+        <a href="./06_bat_1/index_bat_1.html" class="bat">
+            <path id="stade" d="M280 105 a 50 50 0 0 0 30 90 H 450 V 185 H 430 a 50 50 0 0 0 0 -80 H 450 V 95 H 270 V 105 Z" fill="#d91e19" stroke="black" stroke-width="1"></path>
+       
+        
+        <!-- stade intérieur-->
+
+            <path d="M400 105 a 40 40 0 0 1 0 80 H 310 a 40 40 0 0 1 0 -80 H 400" fill="none" stroke="black" stroke-width="1"></path>
+        </a>
+        <!-- bat déchet à côté du stade-->
+       
+            <polygon id="bat_dechet" points="344,203 364,203 364,208 344,208" fill="gray" stroke="black" opacity="1"></polygon>
+       
+
+        <!-- terrain foot-->
+       
+            <polygon id="terrain_foot" points="300,110 410,110 410,180 300,180" fill="var(--espace-vert)" stroke="black" opacity="1"></polygon>
+       
+
+        <!-- terrain tennis-->
+        
+            <polygon id="terrain_tennis" points="460,90 515,90 515,168 460,168" fill="#d91e19" stroke="black" opacity="0.9"></polygon>
+       
+            <!--test point de vue-->
+    <a href="./12_pv_statue_foyer/index_pv_statue_foyer.html">
+                <circle id="pv_statue_foyer" class="point_de_vue" fill="rgb(11,81,161)" cx="660" cy="240" r="5"></circle>
+    </a>
+
+       <!--   TEXTE     -->
+       
+       
+        <text x="45" y="390" text-anchor="left" stroke="rgb(11,81,161)" fill="rgb(11,81,161)" font-family="Arial" font-size="30" font-weight="bold">
+              Lycée Modeste Leroy
+        </text>
+
+        <text x="140" y="325" text-anchor="left" font-family="Arial" font-size="12" transform="rotate(10,140,325)">
+            Rue Pierre Brossolette
+        </text>
+
+        <text x="620" y="336" text-anchor="left" font-family="Arial" font-size="12" transform="rotate(-14,660,336)">
+            Rue Pierre Brossolette
+        </text>
+
+        <text x="330" y="25" text-anchor="left" font-family="Arial" font-size="12">
+            Rue d'Hardencourt
+        </text>
+
+        <text x="318" y="276" text-anchor="left" font-family="Arial" font-size="16">
+            1
+        </text>
+
+        <text x="204" y="226" text-anchor="left" font-family="Arial" font-size="16">
+            2
+        </text>
+
+        <text x="124" y="196" text-anchor="left" font-family="Arial" font-size="16">
+            3
+        </text>
+
+        <text x="48" y="150" text-anchor="left" font-family="Arial" font-size="16">
+            4
+        </text>
+
+        <text x="552" y="160" text-anchor="left" font-family="Arial" font-size="16">
+            5
+        </text>
+
+        <text x="624" y="142" text-anchor="left" font-family="Arial" font-size="16">
+            6
+        </text>
+
+        <text x="684" y="147" text-anchor="left" font-family="Arial" font-size="16">
+            7
+        </text>
+
+        <text x="710" y="200" text-anchor="left" font-family="Arial" font-size="16">
+            8
+        </text>
+
+        <text x="479" y="278" text-anchor="left" font-family="Arial" font-size="14">
+            A
+        </text>
+
+        <text x="572" y="253" text-anchor="left" font-family="Arial" font-size="14">
+            R
+        </text>
+
+        <text x="572" y="276" text-anchor="left" font-family="Arial" font-size="14">
+            C
+        </text>
+
+        <text x="628" y="252" text-anchor="left" font-family="Arial" font-size="14">
+            F
+        </text>
+
+        <text x="210" y="130" text-anchor="left" font-family="Arial" font-size="14">
+            G
+        </text>
+
+        <text x="428" y="275" text-anchor="left" font-family="Arial" font-size="14">
+            V
+        </text>
+
+        <text x="494" y="261" text-anchor="left" font-family="Arial" font-size="14">
+            A
+        </text>
+
+        <text x="495" y="272" text-anchor="left" font-family="Arial" font-size="14">
+            d
+        </text>
+
+        <text x="342" y="285" text-anchor="left" font-family="Arial" font-size="14">
+            CDI
+        </text>
+
+        <text x="607" y="138" text-anchor="left" font-family="Arial" font-size="14">
+            I
+        </text>
+
+        <text x="300" y="72" text-anchor="left" font-family="Arial" font-size="var(--size-legende)">
+            I : infirmerie
+        </text>
+
+        <text x="450" y="72" text-anchor="left" font-family="Arial" font-size="var(--size-legende)">
+            bât 8 : GRETA
+        </text>
+
+        <text x="300" y="54" text-anchor="left" font-family="Arial" font-size="var(--size-legende)">
+            bât 6 : internat filles
+        </text>
+
+        <text x="450" y="54" text-anchor="left" font-family="Arial" font-size="var(--size-legende)">
+            bât 7 : internat garçons
+        </text>
+       
+        <text x="500" y="390" text-anchor="left" font-family="Arial" font-size="var(--size-legende)">
+            A : accueil
+        </text>
+
+        <text x="365" y="390" text-anchor="left" font-family="Arial" font-size="var(--size-legende)">
+            V : vie scolaire
+        </text>
+
+        <text x="590" y="372" text-anchor="left" font-family="Arial" font-size="var(--size-legende)">
+            Ad : administration
+        </text>
+
+        <text x="730" y="372" text-anchor="left" font-family="Arial" font-size="var(--size-legende)">
+            F : foyer
+        </text>
+
+        <text x="590" y="390" text-anchor="left" font-family="Arial" font-size="var(--size-legende)">
+            R : réfectoire
+        </text>
+
+        <text x="730" y="390" text-anchor="left" font-family="Arial" font-size="var(--size-legende)">
+            C : cuisine
+        </text>
+
+        <text x="452" y="356" text-anchor="left" font-family="Arial" font-size="16">
+            Entrée
+        </text>
+        
+    </svg>
+    
+</div>
+
+</body>
+</html>

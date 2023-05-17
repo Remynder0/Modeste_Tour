@@ -1,0 +1,22 @@
+:root {
+    --couleur-brique: brown;
+    --espace-vert: rgb(101, 186, 86);
+    --couleur-route: rgb(110, 110, 110);
+    --size-legende: 14px;
+}
+
+.bat:hover polygon{
+    fill: #e8e91e;
+}
+
+.bat:hover path{
+    fill: #e8e91e;
+}
+
+stop.begin { stop-color:orange; }
+
+stop.end { stop-color:gray; }
+
+text{
+    pointer-events: none;
+}

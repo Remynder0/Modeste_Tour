@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Modeste tour</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bat.css') }}">
+    </head>
+    <body>
+        <h1>Voici le Hall</h1>
+        <!-- notre bulle -->
+        <div id="bubble">
+            <!-- le texte qui apparaitra dans la bulle -->
+            <span id="text">Bonjour {{pseudo}} , je suis votre guide du Hall</span>
+        
+            <!-- 2 spans qui nous serviront à créer la flèche pointant vers notre personnage -->
+            <span id="arrow_border"></span>
+            <span id="arrow_inner"></span>
+        </div>
+        <!-- notre personnage -->
+        <img src="{{image_file}}" class="form" />
+
+    </body>
+</html>
