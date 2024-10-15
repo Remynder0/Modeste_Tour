@@ -151,9 +151,9 @@ def hall():
     
     return render_template("hall.html",image_file=image_file)
 
-
-"""if __name__=="__main__":
+"""
+if __name__=="__main__":
     website_url = 'ModesteTour.fr:5000'
-    app.config['SERVER_NAME'] = website_url 
-app.run(debug="True",host="0.0.0.0")"""
+    app.config['SERVER_NAME'] = website_url """
+app.run(debug="True",host="0.0.0.0")
     
